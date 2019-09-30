@@ -214,9 +214,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dc93678c8d44cb48a9d5cd78e4c5182, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnPosition: {fileID: 6302789821792348107}
+  cannonBall: {fileID: 0}
+  force: 5
   hp: 20
   movementSpeed: 5
   timeToShoot: 3
-  bulletGO: {fileID: 3544854745058353821, guid: 262a83e3eb0a6af4696a81613b1493ec,
-    type: 3}
-  spawnPosition: {fileID: 6302789821792348107}

@@ -32,6 +32,9 @@ public class Enemy : Character
           
         }
 
+        
+
+
 
         movementValue = Mathf.Lerp(-1F, 1F, elapsedTime);
 

@@ -2,7 +2,7 @@
 
 public class Player : Character
 {
-    public float movementSpeed = 5F;  
+    public float movementSpeed = 5F;
 
     private float movementValue = 0F;
 

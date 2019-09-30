@@ -181,6 +181,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!4 &219035257 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6302789821792348107, guid: bda0327416b321f448e81762d939ff2b,
+    type: 3}
+  m_PrefabInstance: {fileID: 6302789823408913034}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &333191123 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6302789821792348107, guid: 0cfaf14372197cd488eaa3983b80140e,
+    type: 3}
+  m_PrefabInstance: {fileID: 3557030592778348597}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &534669902
 GameObject:
   m_ObjectHideFlags: 0
@@ -263,6 +275,55 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!1 &617333533 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6302789823308549634, guid: 0cfaf14372197cd488eaa3983b80140e,
+    type: 3}
+  m_PrefabInstance: {fileID: 3557030592778348597}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &617333534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 617333533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dc93678c8d44cb48a9d5cd78e4c5182, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPosition: {fileID: 333191123}
+  cannonBall: {fileID: 3544854745058353820, guid: 262a83e3eb0a6af4696a81613b1493ec,
+    type: 3}
+  force: 5
+  hp: 3
+  movementSpeed: 5
+  timeToShoot: 3
+--- !u!1 &1864044947 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6302789823308549634, guid: bda0327416b321f448e81762d939ff2b,
+    type: 3}
+  m_PrefabInstance: {fileID: 6302789823408913034}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1864044948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1864044947}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c3f843202bd52e49b7fb72f42cfce75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPosition: {fileID: 219035257}
+  cannonBall: {fileID: 3544854745058353820, guid: 262a83e3eb0a6af4696a81613b1493ec,
+    type: 3}
+  force: 5
+  hp: 3
+  movementSpeed: 5
 --- !u!1001 &3557030592778348597
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -273,6 +334,11 @@ PrefabInstance:
     - target: {fileID: 6302789823308549634, guid: 0cfaf14372197cd488eaa3983b80140e,
         type: 3}
       propertyPath: m_Name
+      value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 6302789823308549634, guid: 0cfaf14372197cd488eaa3983b80140e,
+        type: 3}
+      propertyPath: m_TagString
       value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 6302789823308549639, guid: 0cfaf14372197cd488eaa3983b80140e,
@@ -336,7 +402,13 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3544854745058353820, guid: 262a83e3eb0a6af4696a81613b1493ec,
         type: 3}
-    m_RemovedComponents: []
+    - target: {fileID: 3035330372257014862, guid: 0cfaf14372197cd488eaa3983b80140e,
+        type: 3}
+      propertyPath: hp
+      value: 5
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 3035330372257014862, guid: 0cfaf14372197cd488eaa3983b80140e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 0cfaf14372197cd488eaa3983b80140e, type: 3}
 --- !u!1001 &6302789823408913034
 PrefabInstance:
@@ -348,6 +420,11 @@ PrefabInstance:
     - target: {fileID: 6302789823308549634, guid: bda0327416b321f448e81762d939ff2b,
         type: 3}
       propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 6302789823308549634, guid: bda0327416b321f448e81762d939ff2b,
+        type: 3}
+      propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 6302789823308549639, guid: bda0327416b321f448e81762d939ff2b,
@@ -411,5 +488,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3544854745058353820, guid: 262a83e3eb0a6af4696a81613b1493ec,
         type: 3}
-    m_RemovedComponents: []
+    - target: {fileID: 6302789823308549635, guid: bda0327416b321f448e81762d939ff2b,
+        type: 3}
+      propertyPath: hp
+      value: 5
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 6302789823308549635, guid: bda0327416b321f448e81762d939ff2b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: bda0327416b321f448e81762d939ff2b, type: 3}

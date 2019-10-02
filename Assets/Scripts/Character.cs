@@ -2,14 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Character : MonoBehaviour
 {
     public Transform spawnPosition;
     public Rigidbody cannonBall;
-    public float force = 5F;    
+    public float force = 5F;
+    private float CurrentHealth;
+    public Image ImagenAragana;
 
-    public int health;
+    public float health;
 
     protected void FireBullet()
     {
@@ -19,15 +22,22 @@ public class Character : MonoBehaviour
 
         cannonBallClone.AddForce(transform.forward * force, ForceMode.Impulse);
     }
+    void Start()
+    {
+        CurrentHealth = health;
+    }
 
     public void ApplyDamage(int damageValue)
     {
-        health -= damageValue;
+        
+        CurrentHealth -= damageValue;
 
-        if (health <= 0)
+        ImagenAragana.fillAmount = CurrentHealth / health;
+
+        if (CurrentHealth <= 0)
         {
             Destroy(gameObject);
             SceneManager.LoadScene("Game_Over", LoadSceneMode.Single);
         }
-    }    
+    }   
 }

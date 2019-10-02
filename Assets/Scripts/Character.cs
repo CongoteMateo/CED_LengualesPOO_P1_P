@@ -9,7 +9,7 @@ public class Character : MonoBehaviour
     public Rigidbody cannonBall;
     public float force = 5F;    
 
-    public int hp;
+    public int health;
 
     protected void FireBullet()
     {
@@ -22,9 +22,9 @@ public class Character : MonoBehaviour
 
     public void ApplyDamage(int damageValue)
     {
-        hp -= damageValue;
+        health -= damageValue;
 
-        if (hp <= 0)
+        if (health <= 0)
         {
             Destroy(gameObject);
             SceneManager.LoadScene("Game_Over", LoadSceneMode.Single);
